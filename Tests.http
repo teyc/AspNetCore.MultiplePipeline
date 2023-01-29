@@ -1,0 +1,20 @@
+﻿GET http://localhost:5102/es/sample/greet
+
+> {%
+
+client.test("SpanishGreeter injected", () => {
+    client.assert(response.body.indexOf("Ola") >= 0)
+}) 
+ %}
+
+###
+
+GET http://localhost:5102/en/sample/greet
+
+> {%
+
+client.test("EnglishGreeter injected", () => {
+    client.assert(response.body.indexOf("Hello") >= 0)
+}) 
+ %}
+  
