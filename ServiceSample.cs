@@ -1,3 +1,5 @@
+namespace AspNetMultiPipeline;
+
 public interface IGreeter
 {
     string Greet();

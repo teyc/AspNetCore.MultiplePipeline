@@ -1,3 +1,4 @@
+namespace AspNetMultiPipeline;
 
 public class SpanishGreeter : IGreeter
 {

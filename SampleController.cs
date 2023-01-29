@@ -13,18 +13,10 @@ public class SampleController : Controller
         this.greeter = greeter;
     }
 
-    [HttpGet, Route("")]
+    [HttpGet, Route("greet")]
     public ActionResult Index()
     {
         return Ok(greeter.Greet());
     }
 
-}
-
-public class SampleRouteTransformer : DynamicRouteValueTransformer
-{
-    public async override ValueTask<RouteValueDictionary> TransformAsync(HttpContext httpContext, RouteValueDictionary values)
-    {
-        return values;
-    }
 }
